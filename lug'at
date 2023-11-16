@@ -1,0 +1,30 @@
+ val input = Scanner(System.`in`)
+    val engWords = arrayOfNulls<String>(100)
+    val uzWords = arrayOfNulls<String>(100)
+    var count =0
+    while (true){
+        println("1->so'z qo'shish : 2-> sozlarni korish")
+        val n = input.nextInt()
+        when(n){
+            1->{
+                print("inglizcha soz kriting: ")
+                engWords[count]=input.next()
+                print("tarjimasini kriting: ")
+                uzWords[count]=input.next()
+                println(" saqlandi ")
+                count++
+            }
+            2-> {
+                if (count>0){
+                for (i in 0 until count){
+                    println("${engWords[i]} - ${uzWords[i]}")
+                }
+
+                } else{
+                    println("royhat bosh")
+                }
+            }
+        }
+
+
+    }
